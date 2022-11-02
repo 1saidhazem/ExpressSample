@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/icon_play_login"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/social_media_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_play_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="social media"
+        android:textAllCaps="true"
+        android:textColor="#ffff"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/social_media_text"
+        android:layout_centerHorizontal="true"
+        android:text="mobile app"
+        android:textAllCaps="true"
+        android:textColor="#ffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/mobile_app_text"/>
+
+    <EditText
+        android:id="@+id/EmailEditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_app_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext__rounded_corners"
+        android:gravity="center"
+        android:hint="Please Enter Your Email  "
+        android:maxLines="1"
+        android:padding="18dp"
+        android:textColor="#5361FE"
+        android:textColorHint="#5361FE" />
+
+    <EditText
+        android:id="@+id/PasswordEditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EmailEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext__rounded_corners"
+        android:gravity="center"
+        android:hint="Please Enter Your Password  "
+        android:inputType="textPassword"
+        android:padding="18dp"
+        android:textColor="#5361FE"
+        android:textColorHint="#5361FE"
+        app:passwordToggleTint="#fff"
+        android:maxLines="1"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PasswordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="#FFCF26"
+        android:text="log in"
+        android:textColor="#393B6D"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/loginButton">
+
+        <TextView
+            android:id="@+id/NewToCallingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="New to Calling Apps?"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/signUP_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/NewToCallingText"
+            android:editable="true"
+            android:text=" Sign Up"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/progressBarLogin"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_login"
+    android:padding="15dp"
+    tools:context=".Home_Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_white_register"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_white_register"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/hamburger" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header">
+
+            <EditText
+                android:id="@+id/search_barEditTextHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/background_search_edit_text"
+                android:hint="Search..."
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="32dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHome"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="26dp"
+            android:scrollbars="vertical"
+            android:visibility="gone"
+            tools:listitem="@layout/recycler_view_item" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/fb"
+                    android:layout_marginRight="55dp"
+                    android:id="@+id/fb"
+                    android:clickable="true"/>
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/insta"
+                    android:id="@+id/insta"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                >
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/twitter"
+                    android:layout_marginRight="55dp"
+                    android:id="@+id/twitter"/>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/youtube"
+                    android:id="@+id/youtube"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
