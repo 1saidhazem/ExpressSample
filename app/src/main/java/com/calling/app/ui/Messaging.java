@@ -160,7 +160,9 @@ public class Messaging extends AppCompatActivity {
         CloudMessageManager.getInstance().setListener(new CloudMessageManager.CloudMessageListener() {
             @Override
             public void onMessageReceived(CloudMessage cloudMessage) {
-                onCloudMessageReceived(cloudMessage,Messaging.this);
+                if (cloudMessage != null){
+                    onCloudMessageReceived(cloudMessage,Messaging.this);
+                }
             }
         });
         CloudMessage cloudMessage = CloudMessageManager.getInstance().getCloudMessage();
