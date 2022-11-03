@@ -25,12 +25,12 @@ public class RingtoneManager {
         if (audioManager.getRingerMode() == AudioManager.RINGER_MODE_NORMAL) {
             Uri ringtoneUri = android.media.RingtoneManager
                 .getActualDefaultRingtoneUri(context, android.media.RingtoneManager.TYPE_RINGTONE);
-            if (ringtoneUri != null && mediaPlayer == null) {
+            if (ringtoneUri != null) {
                 try{
                     mediaPlayer = MediaPlayer.create(context, ringtoneUri);
-                    mediaPlayer.setLooping(true);
+                    mediaPlayer.prepare();
                     mediaPlayer.start();
-                    vibrateDevice();
+//                    vibrateDevice();
                 }catch (Exception e){
                     e.printStackTrace();
                 }

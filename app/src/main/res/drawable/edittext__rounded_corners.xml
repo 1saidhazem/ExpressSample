@@ -41,7 +41,7 @@
                 android:startColor="#F2F2F2"
                 android:centerColor="#FFFFFF"
                 android:endColor="#FFFFFF"
-                android:angle="270"
+                android:angle="45"
                 />
             <stroke
                 android:width="0.7dp"
